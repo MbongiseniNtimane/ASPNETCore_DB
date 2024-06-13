@@ -1,0 +1,118 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="~/css/site.css" rel="stylesheet" asp-append-version="true" />
+    <link rel="stylesheet" href="~/fontawesome/css/all.min.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ASPNETCore_DB.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Home</title>
+</head>
+
+<body>
+    <header>
+        <h1>Home</h1>
+    </header>
+    <main class="home-main">
+        <div class="intro">
+            <h1>Welcome to Student Portal</h1>
+            <p>Explore your courses, track your progress, and connect with fellow students.</p>
+        </div>
+       
+        <section class="announcements">
+            
+            <div class="announcement-container">
+                <div class="announcement" onclick="toggleDetails('announcement1')">
+                    <h2>Important Main Test Dates</h2>
+                    <p>
+                        Main Test will be held from the 8th of April till the 12th. Make sure to use Easter holidays to prepare!
+                    </p>
+                </div>
+                <div class="details-container" id="announcement1">
+                    <div class="details">
+                        <h2>Test Week Details</h2>
+                        <p>
+                            All tests will be physical. Students are expected to be in the correct venues.
+                        </p>
+                        <p>Date: April 08, 2024</p>
+                        <p>Time: 10:00 AM</p>
+                        <p>Location: Vereeniging</p>
+                    </div>
+                </div>
+            </div>
+            <div class="event-container">
+                <div class="event" onclick="toggleDetails('event1')">
+                    <h2>Wellness Week</h2>
+                    <p>
+                        There will be Wellness week after main test week. Please go and donate blood to save lives.
+                    </p>
+                </div>
+                <div class="details-container" id="event1">
+                    <div class="details">
+                        <h2>Wellness Event Details</h2>
+                        <p>
+                            Wellness week will be held for a week as usually. There will be different activities and price giving.
+                        </p>
+                        <p>Date: April 15, 2024</p>
+                        <p>Time: 09:00 AM</p>
+                        <p>Location: Campus, near library</p>
+                    </div>
+                </div>
+           
+            </div>
+
+            <div class="event-container">
+                <div class="event" onclick="toggleDetails('event2')">
+                    <h2>Graduations</h2>
+                    <p>
+                        Central University of Technology will have graduations after recess.
+                    </p>
+                </div>
+                <div class="details-container" id="event2">
+                    <div class="details">
+                        <h2>Graduations Event Details</h2>
+                        <p>
+                            Central University of Technology will held graduation ceremony for the class of 2023.
+                        </p>
+                        <p>Date: April 26, 2024</p>
+                        <p>Time: 08:00 AM</p>
+                        <p>Location: Mbongiseni Hall</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="text-center">
+                <h1>User Logged In Information</h1>
+                <p>User Id: @ViewData["UserData"]</p>
+                <p>User Name: @ViewData["UserName"]</p>
+                <p>User Role: @ViewData["UserRole"]</p>
+
+            </div>
+            
+
+
+
+            <script>
+                function toggleDetails(id) {
+                    const detailsContainer = document.getElementById(id);
+                    if (detailsContainer.style.display === "block") {
+                        detailsContainer.style.display = "none";
+                    } else {
+                        detailsContainer.style.display = "block";
+                    }
+                }
+            </script>
+        </section>
+
+    </main>
+
+</body>
+
+</html>

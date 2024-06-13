@@ -1,0 +1,179 @@
+﻿@{
+    ViewData["Title"] = "Courses";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="~/css/site.css" rel="stylesheet" asp-append-version="true" />
+    <link rel="stylesheet" href="~/fontawesome/css/all.min.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ASPNETCore_DB.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <title>Home</title>
+</head>
+<body>
+    <header>
+        <h1>Courses</h1>
+    </header>
+    <div class="container">
+        <div class="courses-container">
+            <div class="course">
+                <h2>Faculty of Humanities</h2>
+                <p>Humanities offers a number of different courses.</p>
+                <ul>
+                    <li>Department of Communication Studies</li>
+                    <li>Department of Language Practise and Translation</li>
+                    <li>Department of Language and Social Sciences Language</li>
+                    <li>Department of Mathematical, Science and Technology</li>
+                   
+                </ul>
+            </div>
+            <div class="course">
+                <h2>Faculty of Management Sciences</h2>
+                <p>Management Sciences offers a number of variety courses.</p>
+                <ul>
+                    <li>Department of Accounting and Auditing</li>
+                    <li>Department of Business Management</li>
+                    <li>Department of Business Support Studies</li>
+                    <li>Department of Tourism and Event Management</li>
+
+                </ul>
+            </div>
+            <div class="course">
+                <h2>Faculty of Health and Environmental Sciences</h2>
+                <p> Health and Environmental Sciences offers the following courses.</p>
+                <ul>
+                    <li>Department of Agriculture</li>
+                    <li>Department of Clinical Sciences</li>
+                    <li>Department of Health Sciences</li>
+                    <li>Department Radiology</li>
+
+                </ul>
+            </div>
+            <div class="course">
+                <h2>Faculty of Engineering, Built Environment and Information Technology</h2>
+                <p> Engineering, Built Environment and Information Technology offers the following courses.</p>
+                <ul>
+                    <li>Department of Mine Engineering</li>
+                    <li>Department of Civil Engineering</li>
+                    <li>Department of Electrical, Electronic and Computer Engineering</li>
+                    <li>Department of Information Technology</li>
+
+                </ul>
+            </div>
+        </div>
+
+
+
+        <div class="event-container">
+            <div class="event" onclick="toggleDetails('event3')">
+                <h2>Short Courses</h2>
+                <p>
+                    Central University of Technology also offers short courses.
+                </p>
+            </div>
+            <div class="details-container" id="event3">
+                <div class="container-fluid services py-5 mb-5">
+                    <div class="containercourses">
+                        <div class="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 600px;">
+                            <h1> Short Courses Built Specifically For Your Interest</h1>
+                        </div>
+                        <div class="row g-5 services-inner">
+                            <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".3s">
+                                <div class="services-item bg-light">
+                                    <div class="p-4 text-center services-content">
+                                        <div class="services-content-icon">
+                                            <i class="fa fa-code fa-7x mb-4 text-primary"></i>
+                                            <h4 class="mb-3">Web Design</h4>
+                                            <p class="mb-4"> Encompasses a range of skills and disciplines involved in producing and maintaining websites.</p>
+                                            <a href="" class="btn btn-secondary text-white px-5 py-3 rounded-pill">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".5s">
+                                <div class="services-item bg-light">
+                                    <div class="p-4 text-center services-content">
+                                        <div class="services-content-icon">
+                                            <i class="fa fa-file-code fa-7x mb-4 text-primary"></i>
+                                            <h4 class="mb-3">Web Development</h4>
+                                            <p class="mb-4"> Web development involves the creation and maintenance of websites and web applications.</p>
+                                            <a href="" class="btn btn-secondary text-white px-5 py-3 rounded-pill">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".7s">
+                                <div class="services-item bg-light">
+                                    <div class="p-4 text-center services-content">
+                                        <div class="services-content-icon">
+                                            <i class="fa fa-external-link-alt fa-7x mb-4 text-primary"></i>
+                                            <h4 class="mb-3">UI/UX Design</h4>
+                                            <p class="mb-4"> Create a positive experience for users interacting with digital products such as websites, mobile apps, etc.</p>
+                                            <a href="" class="btn btn-secondary text-white px-5 py-3 rounded-pill">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".3s">
+                                <div class="services-item bg-light">
+                                    <div class="p-4 text-center services-content">
+                                        <div class="services-content-icon">
+                                            <i class="fas fa-user-secret fa-7x mb-4 text-primary"></i>
+                                            <h4 class="mb-3">Web Security</h4>
+                                            <p class="mb-4">Ensure that websites and web applications are protected against various threats and vulnerabilities.</p>
+                                            <a href="" class="btn btn-secondary text-white px-5 py-3 rounded-pill">Read More</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".5s">
+                                <div class="services-item bg-light">
+                                    <div class="p-4 text-center services-content">
+                                        <div class="services-content-icon">
+                                            <i class="fa fa-envelope-open fa-7x mb-4 text-primary"></i>
+                                            <h4 class="mb-3">Digital Marketing</h4>
+                                            <p class="mb-4"> The use of digital channels, platforms to promote products, services, or brands to reach targeted audiences.</p>
+                                            <a href="" class="btn btn-secondary text-white px-5 py-3 rounded-pill">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".7s">
+                                <div class="services-item bg-light">
+                                    <div class="p-4 text-center services-content">
+                                        <div class="services-content-icon">
+                                            <i class="fas fa-laptop fa-7x mb-4 text-primary"></i>
+                                            <h4 class="mb-3">Programming</h4>
+                                            <p class="mb-4">Programming involves writing instructions for computers to execute tasks.</p>
+                                            <a href="" class="btn btn-secondary text-white px-5 py-3 rounded-pill">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script>
+        function toggleDetails(id) {
+            const detailsContainer = document.getElementById(id);
+            if (detailsContainer.style.display === "block") {
+                detailsContainer.style.display = "none";
+            } else {
+                detailsContainer.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

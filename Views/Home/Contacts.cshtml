@@ -1,0 +1,135 @@
+﻿
+@{
+    ViewData["Title"] = "Contacts";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="~/css/site.css" rel="stylesheet" asp-append-version="true" />
+    <link rel="stylesheet" href="~/fontawesome/css/all.min.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ASPNETCore_DB.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/icofont/1.0.1/icofont.min.css">
+
+   
+</head>
+<body>
+    <header>
+        <h1>Contact</h1>
+    </header>
+    <section class="contact-us section" >
+        <div class="container">
+                       <h3>Visit Our campuses, or leave us a message:</h3>
+            <div class="row">
+                <div class="column">
+                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3524.322263646551!2d26.782598574490496!3d-27.953415137487347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e910d48aae2abb3%3A0xc204a63bd47f59c!2s1%20Mothusi%20Rd%2C%20Thabong%2C%20Welkom%2C%209459!5e0!3m2!1sen!2sza!4v1711827938851!5m2!1sen!2sza" width="480" height="650" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <!----Form to fill your details-->
+                <div class="column">
+                    <form id="contactForm">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" name="firstname" placeholder="Your name.." required>
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" name="lastname" placeholder="Your last name.." required>
+                        <label for="student-number">Student Number or ID</label>
+                        <input type="number" id="student-number" name="student number" placeholder="Student Number or ID" required>
+                        <span id="errorMessage" class="error"></span>
+                        <label for="campus">Campus</label>
+                        <select id="campus" name="Campus">
+                            <option value="welkom">Welkom</option>
+                            <option value="bloemfontein">Bloemfontein</option>  
+                        </select>
+                        <label for="subject">Subject</label>
+                        <textarea id="subject" name="subject" placeholder="Write something.."
+                                  style="height:170px"></textarea>
+                        <span id="successMessage" class="success-message" style="display: none;">Message sent successfully!</span>
+                        <span id="errorMessage" class="error-message" style="display: none;">
+                            Failed to send message. Please try again
+                            later.
+                        </span><br><br>
+                        <input class="bttn" type="submit"  value="Submit">
+                    </form>
+
+                    <div class="message" id="successMessage">
+                         <p>Thank you for your message! We'll get back to you as soon as we can.</p>
+                     </div>
+
+                </div>
+            </div>
+            <!--contact-info -->
+            <div class="contact-info">
+                <div class="row">
+                    <!-- single-info -->
+                    <div class="col-lg-4 col-12 ">
+                        <div class="single-info">
+                            <i class="fa-solid fa-phone"></i>
+                            <div class="content">
+                                <h3>0684604775</h3>
+                                <p>ntimanembongiseni11532003@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/End single-info -->
+                    <!-- single-info -->
+                    <div class="col-lg-4 col-12 ">
+                        <div class="single-info">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div class="content">
+                                <h3>1153 Tshepiso</h3>
+                                <p>Tshepiso, Sharpeville</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/End single-info -->
+                    <!-- single-info -->
+                    <div class="col-lg-4 col-12 ">
+                        <div class="single-info">
+                            <i class="fa-regular fa-clock"></i>
+                            <div class="content">
+                                <h3>Mon - Sat: 9am - 6pm</h3>
+                                <p>Sunday Closed</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/End single-info -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Simulate form submission (you would handle this on the server-side in a real application)
+            var formData = new FormData(event.target);
+            var first_name = formData.get('first-name');
+            var last_name = formData.get('last-name');
+            var student_number = formData.get('student-number');
+            var message = formData.get('message');
+
+            // Simulated success message (you would typically handle this on the server-side)
+            var successMessage = document.getElementById('successMessage');
+            var errorMessage = document.getElementById('errorMessage');
+
+            // Simulate successful submission
+            successMessage.style.display = 'block';
+            errorMessage.style.display = 'none';
+
+            // Clear form fields after successful submission (optional)
+            event.target.reset();
+        });
+        
+    </script>
+</body>
+
+</html>
+
+

@@ -1,0 +1,220 @@
+﻿
+@{
+    ViewData["Title"] = "About";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="~/css/site.css" rel="stylesheet" asp-append-version="true" />
+    <link rel="stylesheet" href="~/fontawesome/css/all.min.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/images/" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ASPNETCore_DB.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Link to Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <title>About Us</title>
+</head>
+<body>
+    <header>
+        <h1>About Us </h1>
+    </header>
+ 
+    <div class="about-container">
+        <!---Slideshow images of activities taking place on campus-->
+        <div class="slideshow-container">
+            <div class="slides">
+                <div class="slide">
+                    <img src="https://burst.shopifycdn.com/photos/grad-students-throwing-hats-in-the-air.jpg?width=1000&format=pjpg&exif=0&iptc=0" alt="graduation">
+                </div>
+                <div class="slide">
+                    <img src="https://fmuathletics.com/images/2023/11/6/717A5827.jpg?width=1416&height=797&mode=crop&scale=both&format=jpg&quality=80" alt="sport">
+                </div>
+                <div class="slide">
+                    <img src="https://www.griffithcollege.edu.au/content/dam/navitas/upa/griffith/images/web/hero-space/students-on-stairs-together.jpg" alt="orientation">
+                </div>
+                <div class="slide">
+                    <img src="https://www.stjohns.edu/sites/default/files/styles/640w/public/2023-07/20230622_orientation_10_960x640.jpg?itok=8TFCZSO5" alt="wellness">
+                </div>
+                <div class="slide">
+                    <img src="https://media.istockphoto.com/id/1311591455/photo/athlete-on-the-running-track-ready-for-the-start.jpg?s=612x612&w=0&k=20&c=fSmJxZAAEv-ZIywjAzoGf53Tu_WGQbVFv7ho4Mcx8wM=" alt="sport">
+                </div>
+            </div>
+            <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+            <a class="next" onclick="moveSlide(1)">&#10095;</a>
+        </div>
+    </div>
+    
+        <!------ Section of what make us different ------->
+        <div class="about-section">
+            <h2>Who We Are</h2>
+            <p>We are dedicated to providing students with a comprehensive platform to enhance their learning experience.</p>
+        </div>
+        <div class="about-section">
+            <h2>Our Mission</h2>
+            <p>Our mission is to empower students through education, innovation, and personalized learning solutions.</p>
+        </div>
+        <div class="about-section">
+            <h2>Why Choose Us</h2>
+            <ul>
+                <li> Access to a wide range of online courses</li>
+                <li>Flexible learning options</li>
+                <li>Track your progress and achievements</li>
+                <li> Experienced instructors</li>
+                <li> Interactive learning environment</li>
+            </ul>
+              
+        </div>
+    
+    <!-- Start Fun-facts -->
+    <div id="fun-facts" class="fun-facts section overlay">
+         <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-12">
+                    <!-- Start Single Fun -->
+                    <div class="single-fun">
+                    <i class="fa-solid fa-house"></i>
+                        <div class="content">
+                            <span class="counter">3468</span>
+                            <p>Class Rooms</p>
+                        </div>
+                    </div>
+                    <!-- End Single Fun -->
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <!-- Start Single Fun -->
+                     <div class="single-fun">
+                    <i class="fa-regular fa-user"></i>
+                        <div class="content">
+                            <span class="counter">557</span>
+                            <p>Lecturers</p>
+                        </div>
+                    </div>
+                    <!-- End Single Fun -->
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <!-- Start Single Fun -->
+                      <div class="single-fun">
+                    <i class="fa-solid fa-face-smile"></i>
+                        <div class="content">
+                            <span class="counter">4379</span>
+                            <p>Happy Clients</p>
+                        </div>
+                    </div>
+                    <!-- End Single Fun -->
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <!-- Start Single Fun -->
+                       <div class="single-fun">
+                    <i class="fa-solid fa-table"></i>
+                        <div class="content">
+                            <span class="counter">32</span>
+                            <p>Years of Experience</p>
+                        </div>
+                    </div>
+                    <!-- End Single Fun -->
+                </div>
+          </div>
+            </div>
+    </div>
+    <!--/ End Fun-facts -->
+
+    <script>
+        let slideIndex = 1;
+
+        function showSlides(n) {
+            const slides = document.getElementsByClassName("slide");
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+
+        function moveSlide(n) {
+            showSlides(slideIndex += n);
+        }
+
+        showSlides(slideIndex);
+    </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Function to count numbers from 0
+            (function ($) {
+                $.fn.countFromZero = function (options) {
+                    var settings = $.extend({
+                        time: 1000, // Animation duration in milliseconds
+                        delay: 10   // Delay between each count in milliseconds
+                    }, options);
+
+                    return this.each(function () {
+                        var $this = $(this);
+                        var nums = [];
+                        var num = $this.text().replace(/,/g, ''); // Remove commas from initial number
+                        var isComma = /[0-9]+,[0-9]+/.test(num);
+                        var isInteger = /^[0-9]+$/.test(num);
+                        var isFloat = /^[0-9]+\.[0-9]+$/.test(num);
+                        var decimalPlaces = isFloat ? (num.split('.')[1] || []).length : 0;
+
+                        for (var i = settings.time / settings.delay; i >= 1; i--) {
+                            var newValue = parseInt(num / (settings.time / settings.delay) * i);
+                            if (isFloat) {
+                                newValue = parseFloat(num / (settings.time / settings.delay) * i).toFixed(decimalPlaces);
+                            }
+                            if (isComma) {
+                                while (/(\d+)(\d{3})/.test(newValue.toString())) {
+                                    newValue = newValue.toString().replace(/(\d+)(\d{3})/, '$1,$2');
+                                }
+                            }
+                            nums.unshift(newValue);
+                        }
+
+                        $this.data('countFromZero-nums', nums);
+                        $this.text('0');
+
+                        var countFunction = function () {
+                            $this.text($this.data('countFromZero-nums').shift());
+                            if ($this.data('countFromZero-nums').length) {
+                                setTimeout(countFunction, settings.delay);
+                            } else {
+                                delete $this.data('countFromZero-nums');
+                                $this.data('countFromZero-nums', null);
+                            }
+                        };
+
+                        setTimeout(countFunction, settings.delay);
+                    });
+                };
+            })(jQuery);
+
+            // Initiate the counting from 0 for each element with the class 'counter'
+            $('.counter').countFromZero({
+                time: 4000, 
+                delay: 10   
+            });
+        });
+    </script>
+
+
+</body>
+</html>
+
+
+
